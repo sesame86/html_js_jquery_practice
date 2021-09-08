@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>눈내리는사걀의마을</title>
+	<style>
+		body {
+			background-image : url("media/snow.jpg");
+			background-size : 100%;
+			background-repeat : no-repeat;
+		}
+		div.snow{
+			position : absolute;
+			font-size : 40px;
+			color : white;
+			padding : 0px;
+			margin : 0px;
+		}
+	</style>
+	<script>
+		var snow = new Array(30);// 눈송이30개에대한배열
+		var x = new Array(30);// 눈송이각각의x좌표
+		var y = new Array(30);// 눈송이각각의y좌표
+		var speedOfFall= new Array(30); // 눈송이의낙하하는속도
+		var speedOfwind= new Array(30); // 떨어지며풍속영향을받는정도
+		var step = new Array(30); // 풍속영향력의변화도
+		function fall() {
+			for(i=0; i<30; i++){
+				y[i] += speedOfFall[i] //눈송이의다음y좌표
+				x[i] += Math.cos(speedOfwind[i]); //눈송이의다음x좌표
+				if(y[i] >= window.innerHeight-60) { //땅에닿은눈송이
+					x[i] = Math.floor(Math.random()*window.innerWidth); // 새로생성
+					y[i] = 0;
+					speedOfFall[i] = Math.random()*2+2;
+				}
+				//브라우저의크기를넘어가는눈송이에대한처리
+				if(x[i] >= window.innerWidth-50)
+					x[i] = window.innerWidth-50;
+				else if(x[i] < 0)
+					x[i] = 50;
+				snow[i].style.top = y[i] + "px";
+				snow[i].style.left = x[i] + "px";
+				speedOfwind[i] += step[i];
+			}
+			setTimeout("fall()",50);
+		}
+	</script>
+</head>
+<body onload="fall()">
+	<script>
+		// 문서가로딩되는단계에서눈(*)을출력하는<div> 객체생성
+		makeSnow();
+		// window.innerHeight는현재윈도우의브라우저영역의높이
+		// window.innerWidth는현재윈도우의브라우저영역의폭
+		function makeSnow(){
+			for(var i=0; i<30; i++) { // 30 개의눈송이생성
+				x[i] = Math.floor(Math.random()*window.innerWidth-10); //눈송이x
+				y[i] = Math.floor(Math.random()*window.innerHeight+10); //최초눈송이의y좌표지정
+				speedOfFall[i] = Math.random()*2+2; //눈송이의낙하속도지정
+				speedOfwind[i] = 1; //최초바람의영향
+				step[i] = Math.random()*0.1+0.05; // 눈송이가받는바람영향변화도
+				// <div id="snowobj012...">*</div> 생성
+				var divtag= "<div class='snow' id=snowobj" + i + " style='top:" + x[i] + "px;left:" + y[i] + "px'>*</div>";
+				document.write(divtag);
+				// <div> DOM 객체기억
+				snow[i] = document.getElementById("snowobj"+i)
+			}
+		}
+	</script>
+</body>
+</html>

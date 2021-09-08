@@ -1,0 +1,60 @@
+<!DOCTYPEhtml>
+<html>
+<head lang="ko"><meta charset="UTF-8"><title>폼검증</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<h2>회원가입</h2>
+<form id="join_form"method="post"action="http://www.abcds.kr/study/s2.php">
+<div>
+<span>아이디</span><br>
+<input type="text"name="id"id="id">
+</div>
+<div>
+<span>패스워드</span><br>
+<input type="password"name="pass"id="pass">
+</div>
+<div>
+<span>패스워드확인</span><br>
+<input type="password"name="pass_con"id="pass_con">
+</div>
+<div>
+<span>성별</span><br>
+<input type="radio"name="gender"value="남자"checked>남자</input>
+<input type="radio"name="gender"value="여자">여자</input>
+</div>
+<div>
+<br><input type="checkbox"name="agree"id="agree"value="ok">동의합니다.</input>
+</div>
+<input type="button"id="submit_button"value="서버로">
+</form>
+<script>
+$(document).ready(function(){
+$("#submit_button").click(function(){
+var id = $("#id");
+var pass = $("#pass");
+var pass_con = $("#pass_con");
+var agree = $("#agree");
+if (id.val() == "") { // 빈 문자열
+alert('아이디를 입력해 주세요'); id.focus();
+} else if (pass.val() == "") {
+alert('비밀번호를 입력해주세요'); pass.focus();
+} else if (pass_con.val() == "") {
+alert('확인 비밀번호를 입력해주세요'); pass_con.focus();
+} else if ( agree.is(":checked") == false) {
+alert('동의하기 버튼을 눌러주세요.'); agree.focus();
+} else { // 모두 입력 되었음
+if (pass.val() == pass_con.val()) { // 비밀번호와 비밀번호 재입력이 같다면
+alert('서버전송');
+$("#join_form").submit();
+} else {
+alert('비밀번호가 다릅니다.');
+pass.val(""); // 초기화
+pass_con.val(""); // 초기화
+pass.focus();
+}
+}
+});
+});
+</script>
+</body></html>

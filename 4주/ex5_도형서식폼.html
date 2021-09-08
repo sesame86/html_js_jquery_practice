@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<head>
+<title>도형 서식 폼 만들기</title>
+<style type="text/css">
+	input{
+		margin: 10px;
+	}
+</style>
+</head>
+<body>
+	<h3>도형 서식 폼 만들기</h3>
+	<hr>
+	<fieldset>
+		<legend>도형 서식 입력</legend>
+	<form>
+		선종류 <input type="text" list="line"><br>
+				<datalist id="line">
+				<option value="선없음">
+				<option value="실선">
+				<option value="점선">
+				</datalist>
+		선두께 <input type="number"min="0.0" max="10.0" step="0.5">
+		선색<input type="color" value="#00BFFF" onchange="document.body.style.color=this.value"><br>
+		투명도(0~100)<input type="range"min="0" max="100"
+						list="temperatures">
+		</fieldset>
+	</form>
+</body>
+</html>

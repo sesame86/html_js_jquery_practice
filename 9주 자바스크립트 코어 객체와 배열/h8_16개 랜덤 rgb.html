@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>16개의 랜덤한 색 만들기</title>
+	<style type="text/css">
+		div {
+			display: inline-block;
+			width: 150px;
+			padding: 10px;
+		}
+	</style>
+	<script type="text/javascript">
+		function randomInt() { // 1~9의십진난수리턴
+			return Math.floor(Math.random()*255) + 1;
+		}
+		// 프로토타입만들기: 생성자함수작성
+		function rgbColor(r, g, b) {
+			// 프로퍼티만들기
+			this.r= r;
+			this.g= g;
+			this.b= b;
+		}
+	</script>
+</head>
+<body>
+	<h3>16개의 랜덤한 색 만들기</h3>
+	<hr>
+	<script>
+		var colorNames=[];
+		var r, g, b;
+		var color = new rgbColor(r, g, b);
+		for(var i=0; i<16; i++) {
+			color.r = randomInt();
+			color.g = randomInt();
+			color.b = randomInt();
+
+			document.write("<div style='background-color: rgb(" + color.r + ","
+				+ color.g + "," + color.b +")");
+			document.write("'>" + "rgb(" + color.r + ", "
+				+ color.g + ", " + color.b +")"+ "</div>");
+		}
+		
+	</script>
+</body>
+</html>

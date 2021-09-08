@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>익명함수로 이벤트리스너 작성</title>
+	<script>
+		var p; // 지역변수로이동가능
+		function init(){ // 문서가완전히로드되었을때호출
+			p = document.getElementById("p");
+			p.onmouseover= function () {// 24. 익명함수
+				this.style.backgroundColor= "orchid";
+			};
+			p.addEventListener("mouseout",
+			function () {
+				this.style.backgroundColor="white"; } // 35. 익명함수
+			);
+		}
+	</script>
+</head>
+<body onload="init()">
+	<h3>익명함수로 이벤트리스너 작성</h3>
+	<hr>
+	<p id="p">마우스올리면orchid 색으로변경</p>
+</body>
+</html>

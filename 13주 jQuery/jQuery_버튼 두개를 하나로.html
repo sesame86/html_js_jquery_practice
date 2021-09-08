@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head lang="ko">
+	<meta charset="UTF-8"><title>제이쿼리 실습2</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<button id="hide_button">숨김</button>
+	<button id="show_button">보이기</button>
+	<br><br>
+	<img>
+	<script>
+		$(document).ready(function(){
+			$('img').attr({// 속성을지정합니다.
+				alt: '사과',
+				src: 'https://www.apple.com/ac/structured-data/images/open_graph_logo.png?201812022340',
+				width: 200
+			});
+			$("#show_button").hide(); // init.
+			$("#hide_button").click(function(){
+				$("img").hide();
+				$("#hide_button").hide();
+				$("#show_button").show();
+			});
+			$("#show_button").click(function(){
+				$("img").show();
+				$("#show_button").hide();
+				$("#hide_button").show();
+			});
+		});
+	</script>
+</body>
+</html>

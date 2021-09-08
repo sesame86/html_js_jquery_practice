@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head><title>overflow 프로퍼티</title>
+<style>
+	.float-frame {
+		background : #E0E0E0;
+		border: 1px solid #D0D0D0;
+		padding: 10px;
+		overflow: hidden; /* float 속성 해제 */
+	}
+	.big-area {
+		float: left;
+		width: 100px;
+		margin: 0 10px 0 0;
+		padding: 10px;
+		background: #A0A0A0;
+	}
+	.small-unit {
+		float: left;
+		width: 48px;
+		height: 48px;
+		color: #FFFFFF;
+		background: #707070;
+		margin: 1px;
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+	<div class="float-frame">
+		<div class="big-area">
+			<div class="small-unit">1</div>
+			<div class="small-unit">2</div>
+			<div class="small-unit">3</div>
+			<div class="small-unit">4</div>
+		</div>
+		<div class="big-area">
+			<div class="small-unit">A</div>
+			<div class="small-unit">B</div>
+			<div class="small-unit">C</div>
+			<div class="small-unit">D</div>
+		</div>
+	</div>
+</body>
+</html>

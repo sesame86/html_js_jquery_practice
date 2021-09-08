@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>innerHTML활용</title>
+	<script>
+		function change() {
+			var p = document.getElementById("firstP");
+			p.innerHTML= "나의<img src='https://image.dongascience.com/Photo/2020/03/5bddba7b6574b95d37b6079c199d7101.jpg' style='width:200px'> 강아지";
+		}
+	</script>
+</head>
+<body>
+	<h3>innerHTML활용: 아래글자에클릭하면예쁜강아지가보입니다.</h3>
+	<hr>
+	<p id="firstP" style="color:blue" onclick="change()">
+		여기에<span style="color:red">클릭하세요</span>
+	</p>
+</body>
+</html>

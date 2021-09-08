@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<script>
+		var ret = prompt("이름을 입력하세요", "김예은");
+		if(ret == null) {
+			document.write(ret); // 취소 버튼이나 다이얼로그를 닫은 경우
+		} else if(ret == "") {
+			document.write(ret); // 문자열 입력 없이 확인 버튼 누른 경우
+		} else {
+			document.write(ret); // ret에는 사용자가 입력한 문자열
+		}
+	</script>
+</head>

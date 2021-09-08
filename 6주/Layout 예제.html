@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head><title>Web shop Page</title>
+<style>
+* {
+padding: 0px; margin: 0px; font-size: 15px;
+}
+header {
+height: 60px; margin: 0px;
+}
+header #kangnam {
+width: 200px; text-align: center;
+}
+header #shop {
+width: 400px; text-align: center;
+}
+header #title {
+font-size: 30px; color: blue; text-decoration: none;
+}
+nav#left {
+margin-top: 10px; width: 170px; height: 350px;
+float: left;
+}
+#left ul {
+width: 165px; font-family: Arial, Helvetica, sans-serif;
+color: #F0F0F0; list-style: none; text-indent: 15px;
+}
+#left ul li {
+background: #7f7f7f; line-height: 28px;
+border-bottom: 1px solid #333;
+}
+#left ul li a {
+text-decoration: none; color: #F0F0F0;
+display: block;
+}
+#left ul li a:hover {
+background: #FFC0C0; color: #0C0C0C;
+}
+#main {
+float: left;
+width: 440px; height: 350px; border: 2px solid gray;
+margin: 10px 0; font-family: Arial, Helvetica, sans-serif;
+color: #464646; overflow: hidden;
+}
+footer {
+clear: both; width: 100%; height: 30px; font-size: 0.9rem;
+font-style: italic; background: lightgray;
+}
+</style>
+</head>
+<body>
+<header>
+<table>
+<tr>
+<td id="kangnam"><a href="http://kangnam.ac.kr" target="_blank"><img
+src="media/kangnam.gif" width="150px"></a></td>
+<td id="shop"><h1 id="title">Kangnam Shop</h1></td>
+</tr>
+</table>
+</header>
+<nav id="left">
+<ul>
+<li><a href="computer.html" target="rightFrame">컴퓨터</a></li>
+<li><a href="clothing.html" target="rightFrame">의류</a></li>
+</ul>
+</nav>
+<section id="main">
+<article id="article1">
+<iframe name="rightFrame" src="computer.html" width="440"
+height="350"></iframe>
+</article>
+</section>
+<footer>Copyright (c) 2019 웹개발기초</footer>
+</body></html>

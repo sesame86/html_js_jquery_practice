@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>do-while 문</title>
+</head>
+<body>
+	<h3>do-while 문으로0에서n까지합</h3>
+	<hr>
+	<script>
+		var n = prompt("0보다큰정수를입력하세요", 0);
+		n = parseInt(n); // 문자열n을숫자로바꿈
+		var i=0; sum=0;
+
+		do {
+			sum += i;// 0+1+2+…+n
+			i++;
+		} while(i<=n); // i가0~n까지반복
+
+		document.write("0에서"+ n + "까지합은"+ sum);
+	</script>
+</body>
+</html>

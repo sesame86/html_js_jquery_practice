@@ -1,0 +1,40 @@
+body{
+	background-color: aliceblue;
+}
+h1{
+	text-align: center;
+	color: brown;
+}
+hr{
+	border-bottom: 1px solid black;
+}
+ul{
+	border: 1px dotted black;
+}
+a{
+	text-decoration: none;
+}
+p{
+	font-family: 휴먼편지체;
+	font-size: 1em;
+	text-indent: 1em;
+}
+.form-font-style{
+	font-family: 휴먼편지체;
+}
+.font-style{
+	color: blue;
+	text-shadow : 3px 3px 5px skyBlue;
+}
+form{
+	background-color: pink;
+	padding: 0px 10px 0px 10px;
+}
+footer{
+	background-color: orange;
+	border-radius: 20px;
+}
+.image-size{
+	height: auto;
+	width: 100%;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>DOM 객체의 이벤트리스너 프로퍼티에 함수등록</title>
+	<script>
+		var p;
+		function init() { // 문서가완전히로드되었을때호출
+			p = document.getElementById("p");
+			p.onmouseover = over;// over()를onmouseover리스너로등록
+			p.onmouseout = out; // out()을onmouseout리스너로등록
+		}
+		function over() {
+			p.style.backgroundColor="orchid";
+		}
+		function out() {
+			p.style.backgroundColor="white";
+		}
+	</script>
+</head>
+<body onload="init()">// 초기화
+	<h3>DOM 객체의 이벤트리스너 프로퍼티에 함수 등록</h3>
+	<hr>
+	<p id="p">마우스 올리면 orchid색으로 변경</p>
+</body>
+</html>

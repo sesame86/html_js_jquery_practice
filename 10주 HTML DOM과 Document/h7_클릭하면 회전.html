@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>transform:rotate()</title>
+	<script type="text/javascript">
+		var n = 90;
+		function rotate(obj) {
+			obj.style.transform="rotate("+n+"deg)";
+			n += 90;
+			n %= 360;
+		}
+	</script>
+</head>
+<body>
+	<h3>클릭하면 90도 회전합니다.</h3>
+	<hr>
+	<img onclick="rotate(this)" src="https://pbs.twimg.com/profile_images/883310597080612864/7bpQshsQ_400x400.jpg">
+</body>
+</html>

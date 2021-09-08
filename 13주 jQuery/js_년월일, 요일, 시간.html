@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+	<meta charset="UTF-8">
+	<title>자바스크립트 실습 6</title>
+	</head>
+<body>
+	<p>지금은 <span id="date"></span></p>
+	<input type="button" id="button" value="몇시?" onclick="get_date()">
+	<script>
+		function get_date() {
+			var d = new Date();
+			var day = d.getDay();
+			switch(day){
+				case 0:
+					day = "일";
+					break;
+				case 1:
+					day = "월";
+					break;
+				case 2:
+					day = "화";
+					break;
+				case 3:
+					day = "수";
+					break;
+				case 4:
+					day = "목";
+					break;
+				case 5:
+					day = "금";
+					break;
+				case 6:
+					day = "토";
+					break;
+				}
+					
+			var date = d.getFullYear() + "년 " + (d.getMonth() + 1) + "월 " + d.getDate() + "일 " + day +"요일" +
+			d.getHours() + "시 " + d.getMinutes() + "분 입니다.";
+			document.getElementById('date').innerHTML = date;
+		}
+	</script>
+</body>
+</html>

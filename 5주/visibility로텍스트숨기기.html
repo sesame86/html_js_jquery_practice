@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>overflow 프로퍼티</title>
+<style>
+p {
+width : 12em;
+height : 3em;
+border : 1px solid lightgray;
+}
+.visible { overflow : visible; }
+.hidden { overflow : hidden; }
+.scroll { overflow : scroll; }
+.auto { overflow : auto; }
+</style>
+</head>
+<body>
+<h3>overflow 프로퍼티</h3>
+<hr>
+<p class="visible">visible: 콘텐츠가 박스를 넘어가도 출력되지만, 어색합니다.</p>
+<p class="hidden">hidden: 박스를 넘어가는 내용이 잘려 보이지 않습니다.</p>
+<p class="scroll">scroll: 박스에 항상 스크롤바를 붙여 출력합니다.</p>
+<p class="auto">auto: 내용이 짧으면 스크롤바가 보이지 않습니다.</p>
+<p class="auto">auto: 내용이 짧으면 스크롤바가 보이지 않지만, 내용이 넘치면 스크롤바가 나타납니다.</p>
+</body>
+</html>

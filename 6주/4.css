@@ -1,0 +1,35 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+header {
+	width: 100%;
+	height: 20%;
+	background-color: yellow;
+	position: : inline-block;
+}
+nav{
+	width: 20%;
+	height: 70%;
+	float: left;
+	background: orange;
+}
+section {
+	width: 80%;
+	height: 70%;
+	float: left;
+	background: skyblue;
+}
+footer {
+	width: 100%;
+	height: 10%;
+	clear: both;
+	background: plum;
+}
+h1{
+	text-align: center;
+}
+.image-size{
+	height: auto;
+	width: 70%;

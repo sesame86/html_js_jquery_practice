@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>방문 요일</title>
+</head>
+<body>
+	<h3>일요일은 pink, 다른 요일은 gold 배경</h3>
+	<hr>
+	<script>
+		var time = new Date(); // 현재시간을가진Date 객체생성
+		console.log(time.getDay());
+
+		if (time.getDay()== 6)
+			document.body.style.backgroundColor= "pink";
+		else
+			document.body.style.backgroundColor= "gold";
+		
+		document.write("현재시간: ");
+		document.write(time.getHours(), "시,");
+		document.write(time.getMinutes(), "분,");
+		document.write(time.getSeconds(), "초<br>");
+	</script>
+</body>
+</html>

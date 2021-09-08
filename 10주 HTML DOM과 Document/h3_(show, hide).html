@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head><meta charset="UTF-8">
+	<title>visibility 프로퍼티</title>
+	<style>
+		span { 
+			visibility : hidden;
+			color : blue; 
+		}
+	</style>
+	<script>
+		function show() {
+		var objArray= document.getElementsByTagName("span");
+		for(var i=0; i<objArray.length; i++) {
+			var obj= objArray[i];
+			// 선택된엘리먼트의CSS 프로퍼티값을알아내기위한방법
+			// obj엘리먼트에적용된CSS styles 가져오기
+			var style = window.getComputedStyle(obj);
+			
+			// CSS 프로퍼티중visibility 값반환
+			var v = style.getPropertyValue("visibility");
+
+			if(v == "hidden")
+				obj.style.visibility= "visible";
+			else
+				obj.style.visibility= "hidden";
+			}
+		}
+	</script>
+</head>
+<body>
+	<h3>다음빈곳에숨은단어?
+	<button onclick="show()">show/hide</button>
+	</h3>
+	<hr>
+	<ul>
+		<li>I (<span>love</span>) you.
+		<li>CSS is Cascading
+		(<span>Style</span>) Sheet.
+		<li>응답하라(<span>1988</span>).
+	</ul>
+</body>
+</html>

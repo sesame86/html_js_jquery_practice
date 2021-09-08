@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head><title>전환 예제</title>
+<style>
+	.box {
+		border-style: solid;
+		border-width: 1px;
+		display: block;
+		width: 100px;
+		height: 100px;
+		background-color: #0000FF;
+		transition: width 2s, height 2s, background-color 2s, transform 2s;
+	}
+	.box:hover {
+		width: 200px;
+		height: 200px;
+		background-color: #FFCCCC;
+		transform: rotate(180deg);
+	}
+</style>
+</head>
+<body>
+	<h3>Transition 예제</h3>
+<body>
+	<p>아래 박스는 width, height, background-color, transform을 위한
+	트랜지션을 결합합니다. 박스 위에 마우스를 올려 속성들의 애니메이션을
+	보세요.</p>
+	<div class="box"></div>
+</body>
+</body>
+</html>
